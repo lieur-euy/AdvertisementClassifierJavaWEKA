@@ -2,7 +2,7 @@
 
 #  Kelompok 9 DT WEKA
 ## SEDIKIT TIPS DARI KEL 9
-### SEDIKIT TIPS DARI KEL 9 Pake WEKA
+### Pake WEKA 
 ```
 run AdvertisementClassifierJavaWEKA dan selesai jangan lupa import
 ```
