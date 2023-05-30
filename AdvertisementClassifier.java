@@ -1,7 +1,7 @@
 import weka.core.Instances;
 import weka.core.converters.ArffLoader;
 import weka.classifiers.trees.J48;
-
+import weka.classifiers.Evaluation;
 import java.io.File;
 
 public class AdvertisementClassifier {
@@ -22,6 +22,13 @@ public class AdvertisementClassifier {
             
             // Print Decision Tree model
             System.out.println(tree);
+
+            // Perform cross-validation
+            Evaluation eval = new Evaluation(dataset);
+            eval.crossValidateModel(tree, dataset, 10, new java.util.Random(1));
+            
+            // Print accuracy
+            System.out.println("Accuracy: " + eval.pctCorrect());
         } catch (Exception e) {
             e.printStackTrace();
         }
